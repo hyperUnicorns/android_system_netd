@@ -18,6 +18,7 @@ include $(CLEAR_VARS)
 
 LOCAL_C_INCLUDES := bionic/libc/dns/include system/netd/include
 LOCAL_CLANG := true
+LOCAL_SDCLANG_LTO := true
 LOCAL_CPPFLAGS := -std=c++11 -Wall -Werror
 
 ifeq ($(BOARD_USES_LIBC_WRAPPER),true)

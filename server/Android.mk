@@ -21,6 +21,7 @@ include $(CLEAR_VARS)
 
 LOCAL_CFLAGS := -Wall -Werror
 LOCAL_CLANG := true
+LOCAL_SDCLANG_LTO := true
 LOCAL_MODULE := libnetdaidl
 LOCAL_SHARED_LIBRARIES := \
         libbinder \
@@ -46,6 +47,7 @@ LOCAL_C_INCLUDES := \
         system/netd/include \
 
 LOCAL_CLANG := true
+LOCAL_SDCLANG_LTO := true
 LOCAL_CPPFLAGS := -std=c++11 -Wall -Werror
 
 ifeq ($(BOARD_USES_LIBC_WRAPPER),true)
@@ -142,6 +144,7 @@ include $(CLEAR_VARS)
 
 LOCAL_CFLAGS := -Wall -Werror
 LOCAL_CLANG := true
+LOCAL_SDCLANG_LTO := true
 LOCAL_MODULE := ndc
 LOCAL_SHARED_LIBRARIES := libcutils
 LOCAL_SRC_FILES := ndc.c
